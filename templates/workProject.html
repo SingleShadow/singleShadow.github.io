@@ -3,22 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<title>project</title>
-	<link rel="stylesheet" type="text/css" href="../css/workProject.less">
+	<link rel="stylesheet" type="text/css" href="../css/css/workProject.css">
+	
 </head>
 <body>
-	<header>
-		<nav>
-			<a href="#">主页</a>
-			<a href="#">项目</a>
-			<a href="#">爱好</a>
-			<a href="#">个人</a>
-		</nav>
-	</header>
-
-	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-<script type="text/javascript">
+	<div id="mainPage">
+		<header>
+			<nav>
+				<!--<a href="#" v-for="titles in pagesTitle">{{ titles.title }}</a>
+				 <a href="#">项目</a> -->
+				<nav-component v-for="item in pagesTitle" v-bind:todo="item"></nav-component>
+			</nav>
+		</header>
+		
+	</div>
 	
-</script>
+	<script type="text/javascript" src="https://unpkg.com/vue@2.4.2"></script>
+	<script type="text/javascript" src="../js/workProject.js"></script>
+
 </body>
 </html>
